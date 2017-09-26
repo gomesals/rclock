@@ -1,0 +1,52 @@
+$clock-background: #222;
+$text-off: #495057;
+$text-on: #adb5bd;
+$text-on-primary: #7048e8;
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	color: $text-off;
+	font-family: "Courier New", Courier, monospace;
+	background-color: #f8f9fa;
+	font-size: 16px;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2rem;
+}
+
+p {
+	text-align: center;
+	a {
+		color: $text-on-primary;
+	}
+}
+
+main {
+	margin: 5rem auto;
+	width: 500px;
+	padding: 2rem 0.5rem 1rem 2rem;
+	background-color: $clock-background;
+	font-size: 0px;
+	span {
+		font-size: 16px;
+		display: inline-block;
+		text-transform: uppercase;
+		letter-spacing: .598em;
+		margin: 0;
+		margin-bottom: .598em;
+		transition: color 300ms linear;
+		&.on {
+			color: $text-on;
+		}
+		&.primary {
+			&.on {
+				color: $text-on-primary;
+			}
+		}
+	}
+}
